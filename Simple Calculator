@@ -1,0 +1,43 @@
+#include<stdio.h>
+
+char op;
+float n1, n2;
+
+int main(){
+	printf("+--------------------+\n");
+	printf("| Calculator         |\n");
+	printf("+--------------------+\n");
+	printf("| + | Addition       |\n");
+	printf("| - | Subtraction    |\n");
+	printf("| * | Multiplication |\n");
+	printf("| / | Division       |\n");
+	printf("+--------------------+\n\n");
+	printf("Enter the code to calculate:\n");
+	scanf("%c", &op);
+	printf("Type the 1st value:\n");
+	scanf("%f", &n1);
+	printf("Type the 2st value:\n");
+	scanf("%f", &n2);
+	switch(op){
+		case '+':
+			printf("Addition: %.1f", n1+n2);
+			break;
+		case '-':
+			printf("Subtraction: %.1f", n1-n2);
+			break;
+		case '*':
+			printf("Multiplication: %.1f", n1*n2);
+			break;
+		case '/':
+			if(n1!=0){
+				printf("Division: %.1f", n1/n2);
+			}
+			else{
+				printf("Division by 0 is not possible.");	
+			}
+			break;		
+		default:
+			printf("Inv");
+	}
+	return(0);	
+}
