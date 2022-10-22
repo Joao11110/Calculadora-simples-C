@@ -37,7 +37,7 @@ int main(){
 			}
 			break;		
 		default:
-			printf("Inv");
+			printf("Invalid option.");
 	}
 	return(0);	
 }
